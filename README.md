@@ -1,4 +1,4 @@
-stuff-I-did
+just-practice
 ===========
 
 My practice projects
