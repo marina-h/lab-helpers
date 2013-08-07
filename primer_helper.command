@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+# -*- coding: utf8 -*-
 '''
 1. Asks for primer sequence
 2. Returns Tm (simple calculation) and reverse complement
@@ -28,4 +30,4 @@ def print_info():
 	print ("The Tm of this primer (A,T=2°C, G,C=4°C) is:\n", melting_temp(primer), "°C")
 	print ("\n")
 
-
+print_info()
