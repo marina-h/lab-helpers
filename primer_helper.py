@@ -4,4 +4,5 @@
 3. Returns reverse complement
 '''
 
-primer = raw_input("\n> ")
+primer = input("What is the primer sequence?\n> ")
+print ("Your primer sequence is: %s" % primer)
