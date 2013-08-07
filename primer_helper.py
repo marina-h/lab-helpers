@@ -29,6 +29,10 @@ print ("Its reverse complement is:\n5'", reverse_comp(primer), "\n")
 print ("The Tm of this primer (A,T=2°C, G,C=4°C) is:\n",melting_temp(primer), "°C")
 print ("\n")
 
+<<<<<<< HEAD
+=======
+vi-no-si-ba-chak1!
+>>>>>>> aa0d48fd72206a4d85763288a9dda739e9e450f4
 
 # print
 # '''
