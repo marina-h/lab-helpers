@@ -30,7 +30,6 @@ print ("The Tm of this primer (A,T=2°C, G,C=4°C) is:\n",melting_temp(primer), 
 print ("\n")
 
 
-
 # print
 # '''
 # 
