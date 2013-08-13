@@ -1,8 +1,3 @@
-'''
-1. Asks for primer sequence
-2. Returns Tm (simple calculation) and reverse complement
-'''
-
 reverse_comp_dict = {'A':'T', 'T':'A','G':'C', 'C':'G'}
 
 primer = input("\nWhat is your primer sequence?\n> ").upper()

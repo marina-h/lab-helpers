@@ -1,3 +1,5 @@
+import readline 
+
 # ask for primer sequence (in specified format)
 print "\n------------------------------------------------------------------------"
 primer = raw_input("\nWhat is the sequence of the primer you want to make wobble changes in? \
@@ -28,6 +30,7 @@ def pretty_protein_code(split_primer):
 while True:
 	left_changes  = int(raw_input("\nHow many wobble changes do you want to the left of the mutation?\n> "))
 	right_changes = int(raw_input("\nTo the right?\n> "))
+
 	print "\nYou want %s wobble change(s) to the right, and %s wobble change(s) to the left." % (
 		  left_changes, right_changes)
 	print "Is this correct? (Y/N)", 
@@ -56,22 +59,26 @@ def wobble(primer):
 	start_r = 1
 	start_l = 1
 
-	for right in range(right_changes):
-		to_mut = mut_codon_list[pos+start_r]
-		for c in codon_table:
-			if codon_table[c] == AA_list[pos+start_r] and c[:2]==to_mut[:2] and c != to_mut:
-				mut_codon_list[pos+start_r] = c
-				break
-		start_r += 1
+	try:
+		for right in range(right_changes):
+			to_mut = mut_codon_list[pos+start_r]
+			for c in codon_table:
+				if codon_table[c] == AA_list[pos+start_r] and c[:2]==to_mut[:2] and c != to_mut:
+					mut_codon_list[pos+start_r] = c
+					break
+			start_r += 1
 
-	for left in range(left_changes):
-		to_mut = mut_codon_list[pos-start_l]
-		for c in codon_table:
-			if codon_table[c] == AA_list[pos-start_l] and c[:2]==to_mut[:2] and c != to_mut:
-				mut_codon_list[pos-start_l] = c
-				break
-		start_l += 1
-	
+		for left in range(left_changes):
+			to_mut = mut_codon_list[pos-start_l]
+			for c in codon_table:
+				if codon_table[c] == AA_list[pos-start_l] and c[:2]==to_mut[:2] and c != to_mut:
+					mut_codon_list[pos-start_l] = c
+					break
+			start_l += 1
+
+	except IndexError:
+		print "\nError: You wanted more wobble changes than possible with this primer!"
+
 	return mut_codon_list
 
 # print out new and old primers with their translations
