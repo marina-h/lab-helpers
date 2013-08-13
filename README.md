@@ -1,11 +1,11 @@
 just-practice
-===========
+=============
 
 My practice projects!
 
 
-primer_helper.py:
-===========
+primer_helper:
+-----------
 
 This is a simple python script that will:
 
@@ -13,3 +13,11 @@ This is a simple python script that will:
 
 2. print the reverse complement
 	
+wobble maker:
+-------------
+
+This is another python script that will:
+
+1. Take a primer sequence with a point mutation
+
+2. Modify the primer to include the specified number of wobble changes
