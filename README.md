@@ -1,11 +1,9 @@
-just-practice
+Lab Helpers
 =============
 
-My practice projects!
+My practice projects in Python!
 
-
-primer_helper:
------------
+**primer_helper:**
 
 This is a simple python script that will:
 
@@ -13,8 +11,7 @@ This is a simple python script that will:
 
 2. print the reverse complement
 	
-wobble maker:
--------------
+**wobble maker:**
 
 This is another python script that will:
 
